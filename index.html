@@ -6,15 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Presentes</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
-    <h1>Lista de Presentes</h1>
-    <ul id="gift-list"></ul>
-    <input type="text" id="gift-name" placeholder="Nome do presente">
-    <button id="add-gift">Adicionar Presente</button>
+    <div class="container">
+        <h1>Lista de Presentes</h1>
+        <div class="row" id="gift-list"></div> <!-- Usando uma row do Bootstrap -->
+        <input type="text" id="gift-name" class="form-control my-3" placeholder="Nome do presente">
+        <button id="add-gift" class="btn btn-primary">Adicionar Presente</button>
+    </div>
 
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script type="module" src="script.js"></script>
+
+    <!--ADICIONANDO MODAL DE IDENTIFICAÇÃO-->
+
+    <div class="modal fade" id="reserveModal" tabindex="-1" role="dialog" aria-labelledby="reserveModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="reserveModalLabel">Reservar Presente</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <input type="text" id="reserver-name" class="form-control" placeholder="Seu nome">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="button" id="confirm-reserve" class="btn btn-primary">Reservar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
