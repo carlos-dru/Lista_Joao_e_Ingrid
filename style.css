@@ -1,13 +1,13 @@
 body {
-    background-image: url('images/jose_e_allana.jpg');
+    background-image: url('images/imagem-canva.png');
     /* Caminho para sua imagem */
-    background-size: 100% auto;
+    background-size: cover;
     /* Faz a imagem cobrir todo o fundo */
     background-repeat: no-repeat;
     /* Evita repetição da imagem */
     background-position: center;
     /* Centraliza a imagem */
-    background-attachment: scroll;
+    background-attachment: fixed;
     /* Mantém a imagem fixa ao rolar a página */
     font-family: Arial, sans-serif;
     padding: 20px;
@@ -22,7 +22,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.7);
     z-index: -1;
     /* Fica atrás do conteúdo */
 }
@@ -72,4 +72,20 @@ button {
 
 .botao-reservar {
     font-size: 14px !important;
+}
+
+.custom-card {
+    opacity: 0.9;
+    /* Define o nível de transparência (1 é completamente opaco, 0 é totalmente transparente) */
+    transition: opacity 0.3s ease;
+    /* Adiciona uma transição suave ao passar o mouse */
+}
+
+.custom-card:hover {
+    opacity: 1;
+    /* Torna o card completamente opaco ao passar o mouse */
+}
+
+.titulo {
+    text-align: center;
 }

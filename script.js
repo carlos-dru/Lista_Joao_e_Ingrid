@@ -55,7 +55,7 @@ onValue(giftsRef, (snapshot) => {
         card.className = "col-6 col-sm-6 col-md-3 mb-3"; // Responsividade: 2 por linha no mobile, 4 por linha no desktop
 
         const giftCard = document.createElement("div");
-        giftCard.className = "card h-100";
+        giftCard.className = "card h-100 custom-card";
 
         // Adicionar imagem ao card
         if (gift.imagePath) {
@@ -104,12 +104,26 @@ onValue(giftsRef, (snapshot) => {
 // Confirmar reserva no modal
 document.getElementById("confirm-reserve").addEventListener("click", () => {
     const reserverName = document.getElementById("reserver-name").value;
+
     if (reserverName.trim() && selectedGiftId) {
         const giftRef = ref(db, `gifts/${selectedGiftId}`);
+
         update(giftRef, { reserved: true, reserver: reserverName })
             .then(() => {
                 console.log("Presente reservado com sucesso!");
-                $('#reserveModal').modal('hide'); // Fechar o modal
+
+                // Fechar o modal
+                $('#reserveModal').modal('hide');
+
+                // Exibir o alerta
+                const alertDiv = document.getElementById("alert-reserved");
+                alertDiv.textContent = `Presente reservado com sucesso por ${reserverName}!`;
+                alertDiv.style.display = "block";
+
+                // Ocultar o alerta após 5 segundos
+                setTimeout(() => {
+                    alertDiv.style.display = "none";
+                }, 5000);
             })
             .catch((error) => console.error("Erro ao reservar presente:", error));
     } else {

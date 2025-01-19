@@ -10,8 +10,17 @@
 </head>
 
 <body>
+
+    <!--ADICIONANDO ALERTA DE SUCESSO-->
+
+    <div id="alert-reserved" class="alert alert-success alert-dismissible fade show" role="alert"
+        style="display: none;">
+        <!-- A mensagem será preenchida dinamicamente no JavaScript -->
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
     <div class="container">
-        <h1>Lista de Presentes</h1>
+        <h1 class="titulo">Lista de Presentes</h1>
         <div class="row" id="gift-list"></div> <!-- Usando uma row do Bootstrap -->
         <input type="text" id="gift-name" class="form-control my-3" placeholder="Nome do presente">
         <button id="add-gift" class="btn btn-primary">Adicionar Presente</button>
@@ -45,6 +54,8 @@
             </div>
         </div>
     </div>
+
+
 </body>
 
 </html>
