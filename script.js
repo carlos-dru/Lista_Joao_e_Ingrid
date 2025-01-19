@@ -42,7 +42,7 @@ document.getElementById("add-gift").addEventListener("click", () => {
 let snapshot;
 let selectedGiftId = '';
 
-/// Atualizar lista de presentes em tempo real
+// Atualizar lista de presentes em tempo real
 onValue(giftsRef, (snapshot) => {
     const giftList = document.getElementById("gift-list");
     giftList.innerHTML = ""; // Limpar lista
@@ -52,7 +52,7 @@ onValue(giftsRef, (snapshot) => {
         const giftKey = childSnapshot.key; // Identificador único do presente
 
         const card = document.createElement("div");
-        card.className = "col-sm-3 mb-3"; // Bootstrap classes para grid
+        card.className = "col-6 col-sm-6 col-md-3 mb-3"; // Responsividade: 2 por linha no mobile, 4 por linha no desktop
 
         const giftCard = document.createElement("div");
         giftCard.className = "card";
@@ -69,7 +69,7 @@ onValue(giftsRef, (snapshot) => {
         const giftBody = document.createElement("div");
         giftBody.className = "card-body";
 
-        const giftName = document.createElement("h5");
+        const giftName = document.createElement("h6");
         giftName.className = "card-title";
         giftName.textContent = gift.name;
 
@@ -98,6 +98,7 @@ onValue(giftsRef, (snapshot) => {
         giftList.appendChild(card);
     });
 });
+
 
 
 // Confirmar reserva no modal
