@@ -28,7 +28,7 @@ document.getElementById("add-gift").addEventListener("click", () => {
             name: giftName,
             reserved: false,
             reserver: '',
-            imagePath: '/images/presente1.jpg'
+            imagePath: 'images/presente1.jpg'
         })
             .then(() => console.log("Presente adicionado com sucesso!"))
             .catch((error) => console.error("Erro ao adicionar presente:", error));
@@ -55,7 +55,7 @@ onValue(giftsRef, (snapshot) => {
         card.className = "col-6 col-sm-6 col-md-3 mb-3"; // Responsividade: 2 por linha no mobile, 4 por linha no desktop
 
         const giftCard = document.createElement("div");
-        giftCard.className = "card";
+        giftCard.className = "card h-100";
 
         // Adicionar imagem ao card
         if (gift.imagePath) {
