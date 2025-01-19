@@ -77,7 +77,7 @@ onValue(giftsRef, (snapshot) => {
 
         if (!gift.reserved) {
             const reserveButton = document.createElement("button");
-            reserveButton.className = "btn btn-primary";
+            reserveButton.className = "btn btn-primary botao-reservar";
             reserveButton.textContent = "Reservar";
 
             // Lógica para exibir modal e capturar reserva
