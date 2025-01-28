@@ -57,6 +57,11 @@ onValue(giftsRef, (snapshot) => {
         const giftCard = document.createElement("div");
         giftCard.className = "card h-100 custom-card";
 
+        // Se o presente estiver reservado, aplica o filtro de preto e branco
+        if (gift.reserved) {
+            giftCard.style.filter = "grayscale(90%)"; // Aplica o efeito preto e branco
+        }
+
         // Adicionar imagem ao card
         if (gift.imagePath) {
             const giftImage = document.createElement("img");
@@ -116,14 +121,7 @@ document.getElementById("confirm-reserve").addEventListener("click", () => {
                 $('#reserveModal').modal('hide');
 
                 // Exibir o alerta
-                const alertDiv = document.getElementById("alert-reserved");
-                alertDiv.textContent = `Presente reservado com sucesso por ${reserverName}!`;
-                alertDiv.style.display = "block";
-
-                // Ocultar o alerta após 5 segundos
-                setTimeout(() => {
-                    alertDiv.style.display = "none";
-                }, 5000);
+                $('#reservaSucesso').modal('show');
             })
             .catch((error) => console.error("Erro ao reservar presente:", error));
     } else {
