@@ -94,7 +94,10 @@ onValue(giftsRef, (snapshot) => {
             giftBody.appendChild(reserveButton);
         } else {
             const reservedText = document.createElement("p");
-            reservedText.textContent = "Reservado por " + gift.reserver;
+            const reserverNameBold = document.createElement("b");
+            reserverNameBold.textContent = gift.reserver;
+            reservedText.textContent = "Reservado por ";
+            reservedText.appendChild(reserverNameBold);
             giftBody.appendChild(reservedText);
         }
 
