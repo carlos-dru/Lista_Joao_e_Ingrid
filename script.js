@@ -52,7 +52,7 @@ onValue(giftsRef, (snapshot) => {
         const giftKey = childSnapshot.key; // Identificador único do presente
 
         const card = document.createElement("div");
-        card.className = "col-6 col-sm-6 col-md-3 mb-3"; // Responsividade: 2 por linha no mobile, 4 por linha no desktop
+        card.className = "col-6 col-sm-6 col-md-3 mb-5"; // Responsividade: 2 por linha no mobile, 4 por linha no desktop
 
         const giftCard = document.createElement("div");
         giftCard.className = "card h-100 custom-card";
@@ -131,3 +131,22 @@ document.getElementById("confirm-reserve").addEventListener("click", () => {
         console.warn("Nome do reservante ou ID do presente inválido.");
     }
 });
+
+// Copiar código PIX
+window.copyPixKey = function () {
+    var pixKeyInput = document.getElementById("pix-key");
+
+    navigator.clipboard.writeText(pixKeyInput.value).then(() => {
+        var copyMessage = document.getElementById("copy-message");
+        copyMessage.innerText = "Chave Pix copiada!";
+        copyMessage.style.color = "green";
+
+        setTimeout(() => { copyMessage.innerText = ""; }, 4000);
+    }).catch(err => {
+        console.error("Erro ao copiar chave Pix:", err);
+        var copyMessage = document.getElementById("copy-message");
+        copyMessage.innerText = "Erro ao copiar!";
+        copyMessage.style.color = "red";
+    });
+};
+
