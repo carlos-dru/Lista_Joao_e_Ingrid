@@ -25,13 +25,7 @@
     </div>
 
     <div class="container">
-        <div class="topoPagina">
-            <h2 class="titulo mb-1">"Assim, permanecem agora estes três: a fé, a esperança e o amor. O maior destes,
-                porém,
-                é o
-                amor."</h2>
-            <h3 class="titulo mb-2">1 Coríntios 13:13</h3>
-
+        <div class="topoPagina mb-4 mt-2">
             <h1 class="titulo" style="font-weight: bold;">Lista de Presentes
             </h1>
         </div>
@@ -47,19 +41,27 @@
 
             <!-- Campo para copiar a chave Pix -->
             <div class="pix-key-container">
-                <input type="text" id="pix-key" class="form-control" value="e2fe377b-1301-40cc-b7f4-0058a0af3cd0"
-                    readonly>
+                <input type="text" id="pix-key" class="form-control pix-key-input"
+                    value="e2fe377b-1301-40cc-b7f4-0058a0af3cd0" readonly>
                 <button class="btn btn-primary" onclick="copyPixKey()">Copiar</button>
                 <p id="copy-message" style="color: green; margin-top: 5px;"></p>
+
             </div>
 
             <p id="copy-message" class="copy-message"></p>
         </div>
 
         <!--CADASTRO DE PRESENTES EM TELA-->
-        <input type="text" id="gift-name" class="form-control my-3" placeholder="Nome do presente">
-        <button id="add-gift" class="btn btn-primary">Adicionar Presente</button>
-
+        <input type="text" id="gift-name" class="form-control my-3" placeholder="Nome do presente"
+            style="display: none;">
+        <button id="add-gift" class="btn btn-primary" style="display: none;">Adicionar Presente</button>
+    </div>
+    <div class="topoPagina mt-5">
+        <h2 class="titulo mb-1">"Assim, permanecem agora estes três: a fé, a esperança e o amor. O maior destes,
+            porém,
+            é o
+            amor."</h2>
+        <h3 class="titulo mb-2">1 Coríntios 13:13</h3>
     </div>
 
 
