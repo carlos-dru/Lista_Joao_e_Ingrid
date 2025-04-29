@@ -1,8 +1,16 @@
 .topoPagina {
     font-family: "Gwendolyn", cursive !important;
-    font-weight: 400;
     font-style: normal !important;
 }
+
+.topoPagina h2 {
+    font-weight: bold;
+}
+
+.topoPagina h3 {
+    font-weight: bold;
+}
+
 
 body {
     background-image: url('images/Home.png');
@@ -186,4 +194,9 @@ button {
         width: 80% !important;
         font-size: 16px;
     }
+}
+
+.card-img-top {
+    width: 253px;
+    height: 253px;
 }
