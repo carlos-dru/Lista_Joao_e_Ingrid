@@ -5,13 +5,13 @@ import { getDatabase, ref, push, onValue, update } from "https://www.gstatic.com
 
 // Configuração do Firebase
 const firebaseConfig = {
-    apiKey: "AIzaSyDl7rmBizjf7SwuCobBcTrw38z8jsj0f5s",
-    authDomain: "listapresentes-bc93b.firebaseapp.com",
-    databaseURL: "https://listapresentes-bc93b-default-rtdb.firebaseio.com",
-    projectId: "listapresentes-bc93b",
-    storageBucket: "listapresentes-bc93b.firebasestorage.app",
-    messagingSenderId: "724995747468",
-    appId: "1:724995747468:web:2a5f6e019e83a7aa6495a9"
+    apiKey: "AIzaSyBvjv7hWtItpvdFNPIsNM13M4gA2ByfiEo",
+    authDomain: "lista-presentes-joao-e-ingrid.firebaseapp.com",
+    databaseURL: "https://lista-presentes-joao-e-ingrid-default-rtdb.firebaseio.com",
+    projectId: "lista-presentes-joao-e-ingrid",
+    storageBucket: "lista-presentes-joao-e-ingrid.firebasestorage.app",
+    messagingSenderId: "870061492489",
+    appId: "1:870061492489:web:29ce3b7ff02a90fa956bd8"
 };
 
 // Inicializar Firebase
