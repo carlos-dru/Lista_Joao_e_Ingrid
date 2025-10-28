@@ -34,17 +34,16 @@
 
         <!--QR CODE PIX-->
         <div class="pix-container">
-            <h4>Se preferir, nos presenteie com um PIX:</h4>
+            <h4 class="titulo">Se preferir, nos presenteie com um PIX:</h4>
 
             <!-- Exibição do QR Code -->
             <img src="images/qrcode-pix.png" alt="QR Code para pagamento via Pix" class="qr-code">
 
             <!-- Campo para copiar a chave Pix -->
             <div class="pix-key-container">
-                <input type="text" id="pix-key" class="form-control pix-key-input"
-                    value="e2fe377b-1301-40cc-b7f4-0058a0af3cd0" readonly>
-                <button class="btn btn-primary" onclick="copyPixKey()">Copiar</button>
-                <p id="copy-message" style="color: green; margin-top: 5px;"></p>
+                <input type="text" id="pix-key" class="form-control pix-key-input" value="48996314147" readonly>
+                <button class="botaoVerde" onclick="copyPixKey()">Copiar</button>
+                <p id="copy-message" style="margin-top: 5px;"></p>
 
             </div>
 
@@ -57,11 +56,10 @@
         <button id="add-gift" class="btn btn-primary" style="display: none;">Adicionar Presente</button>
     </div>
     <div class="topoPagina mt-5">
-        <h2 class="titulo mb-1">"Assim, permanecem agora estes três: a fé, a esperança e o amor. O maior destes,
-            porém,
-            é o
-            amor."</h2>
-        <h3 class="titulo mb-2">(1 Coríntios 13:13)</h3>
+        <h2 class="titulo mb-1">"Deus mudou o teu caminho até juntares com o meu e guardou a tua vida separando-a para
+            mim. Para onde fores, irei; onde tu repousares, repousarei. Teu Deus será o meu Deus. Teu caminho o meu
+            será."</h2>
+        <h3 class="titulo mb-2">(Rute 1:16,17)</h3>
     </div>
 
 
@@ -77,7 +75,7 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="reserveModalLabel">Reservar Presente</h5>
+                    <h5 class="modal-title textoVerde" id="reserveModalLabel">Reservar Presente</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -87,7 +85,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                    <button type="button" id="confirm-reserve" class="btn btn-primary">Reservar</button>
+                    <button type="button" id="confirm-reserve" class="btn botaoVerde">Reservar</button>
                 </div>
             </div>
         </div>
@@ -100,16 +98,16 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="reservaSucessoLabel">Reserva efetuada!</h5>
+                    <h5 class="modal-title textoVerde" id="reservaSucessoLabel">Reserva efetuada!</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p id="textoSucesso">Presente reservado com sucesso!</p>
+                    <p id="textoSucesso" class="textoVerde">Presente reservado com sucesso!</p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" id="fecharModalSucesso" class="btn btn-primary"
+                    <button type="button" id="fecharModalSucesso" class="btn botaoVerde"
                         data-dismiss="modal">Fechar</button>
                 </div>
             </div>

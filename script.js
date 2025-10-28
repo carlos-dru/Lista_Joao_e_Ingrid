@@ -75,14 +75,14 @@ onValue(giftsRef, (snapshot) => {
         giftBody.className = "card-body";
 
         const giftName = document.createElement("h6");
-        giftName.className = "card-title";
+        giftName.className = "card-title textoVerde";
         giftName.textContent = gift.name;
 
         giftBody.appendChild(giftName);
 
         if (!gift.reserved) {
             const reserveButton = document.createElement("button");
-            reserveButton.className = "btn btn-primary botao-reservar";
+            reserveButton.className = "btn botaoVerde botao-reservar";
             reserveButton.textContent = "Reservar";
 
             // Lógica para exibir modal e capturar reserva
